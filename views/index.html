@@ -1,0 +1,84 @@
+Hello {{title}} <!-- Hello ingoo-->
+<!-- GET 요청하기 -->
+<h1>GET요청</h1>
+<form action="/login" method="get">
+    <input type="text" name="userid">
+    <input type="password" name="userpw">
+    <input type="submit" value="GET"> <!-- 1번째 -->
+    <!-- http://localhost:3000 -> http://localhost:3000/login -->
+</form>
+
+
+<!-- POST 요청하기 -->
+<h1>POST요청</h1>
+<form action="/login" method="post">
+    <input type="text" name="userid">
+    <input type="password" name="userpw">
+    <input type="submit" value="POST">
+</form>
+
+
+<!-- 비동기 활용하기 -->
+<h1>비동기 활용하기 GET</h1>
+<button id="btn">통신하기</button>
+<div id="lodding" style="display:none;">
+    <img src="data:image/png;base64,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">
+</div>
+<div id="getroot"></div>
+<script type="text/javascript">
+const btn = document.querySelector('#btn');
+btn.addEventListener('click',btnFn);
+function btnFn(){
+    console.log('req click');
+    document.querySelector('#lodding').style.display='block';
+    let options = {
+        method:'GET',
+    }
+    // Promise Object 
+    fetch('http://localhost:3000/login?userid=asdf&userpw=asdf',options)
+    .then(data => {
+        console.log(data);
+        if(data.status == 404){
+            const root = document.querySelector('#getroot');
+            root.innerHTML = '페이지가 존재하지않음.';
+        }
+        return data.text();
+    }) //Promise Object 
+    .then(text=>{
+        document.querySelector('#lodding').style.display='none';
+        const root = document.querySelector('#getroot');        
+        root.innerHTML += text+'<br />';
+    })
+}
+</script>
+
+<h1>비동기 활용하기 POST</h1>
+<button id="btn2">통신하기</button>
+<div id="postroot"></div>
+<script type="text/javascript">
+    const btn2 = document.querySelector('#btn2');
+    btn2.addEventListener('click',btnFn2);
+    function btnFn2(){
+        console.log('req click');
+        let options = {
+            method:'POST',
+            headers:{
+                //'content-type':'application/x-www-form-urlencoded',
+                'content-type':'application/json'
+            },
+            //body:'userid=asdfasdf&userpw=asdfasdf',
+            //body:JSON.stringify({userid:'asdfasdf',userpw:'asdfasdf'}),
+            body:`{"userid":"asdfasdf","userpw":"asdfasdf"}`
+            
+        }
+        fetch('http://localhost:3000/login',options)
+        .then(data => {
+            console.log(data)
+            return data.text();
+        })
+        .then(text=>{
+            const root = document.querySelector('#postroot');
+            root.innerHTML += text+'<br />';
+        })
+    }
+</script>
